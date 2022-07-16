@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator wydatków</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700&display=swap&subset=latin-ext"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/d5364f429b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav__left">
+            <div class="logo">
+                <i class="fa-solid fa-wallet"></i>
+                <h1>Portfel</h1>
+            </div>
+            <p>Osobisty menadzer finansów.</p>
+        </div>
+        <div class="nav__right center-flex">
+            <div class="nav__right-transaction center-flex button">
+                <i class="fa-solid fa-plus"></i>
+                <p>Przychód</p>
+            </div>
+            <div class="nav__right-expense center-flex button">
+                <i class="fa-solid fa-minus"></i>
+                <p>Wydatek</p>
+            </div>
+            <div class="nav__right-transaction-delete center-flex button">
+                <i class="fa-solid fa-trash"></i>
+                <p>Usuń wszystko</p>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="transactions">
+            <h2 class="transactions__title">Lista transakcji</h2>
+            <div class="transactions__list">
+                <div class="income-area box">
+                    <p class="title">Przychód:</p>
+                </div>
+                <div class="expenses-area box">
+                    <p class="title">Wydatki:</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="saldo">
+            <h2>Twoje saldo:</h2>
+            <p class="money"> 0zł</p>
+        </div>
+    </main>
+
+    <div class="transaction-panel panel-left">
+        <h2 class="title">Dodaj nowy przychód</h2>
+        <label for="name">Nazwa:</label>
+        <input type="text" id="name"></input>
+        <label for="amount">Kwota:</label>
+        <input type="number" id="amount"></input>
+        <label for="category">Wybierz kategorię:</label>
+        <select id="category" onchange="selectCategory()">
+            <option value="none" selected disabled></option>
+            <option value="income">Wypłata</option>
+            <option value="shopping">Inne</option>
+        </select>
+        <div class="panel-buttons">
+            <button class="save"><i class="fas fa-save"></i> Zapisz</button>
+            <button class="cancel"><i class="far fa-window-close"></i> Anuluj</button>
+        </div>
+    </div>
+
+    <div class="transaction-panel panel-right">
+        <h2 class="title">Dodaj nowy wydatek</h2>
+        <label for="name">Nazwa:</label>
+        <input type="text" id="name-second"></input>
+        <label for="amount">Kwota:</label>
+        <input type="number" id="amount-second"></input>
+        <label for="category">Wybierz kategorię:</label>
+        <select id="category-second" onchange="selectCategory()">
+            <option value="none" selected disabled></option>
+            <option value="income">Wypłata</option>
+            <option value="shopping">Inne</option>
+        </select>
+        <div class="panel-buttons">
+            <button class="save-right"><i class="fas fa-save"></i> Zapisz</button>
+            <button class="cancel-right"><i class="far fa-window-close"></i> Anuluj</button>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

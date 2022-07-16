@@ -1,0 +1,26 @@
+.center-flex {
+	display: flex;
+	align-items: center;
+}
+.button {
+	padding: 15px;
+	border: 1px solid rgb(199, 199, 199);
+	border-radius: 20px;
+	margin: 0 20px 0 0;
+	transition: 0.3s;
+	cursor: pointer;
+}
+.button:hover {
+	color: white;
+	background-color: black;
+}
+.box {
+	min-height: 200px;
+	min-width: 600px;
+	padding: 20px;
+	background-color: white;
+	// border-radius: 20px;
+	font-size: 20px;
+	margin: 0 20px;
+	box-shadow: 0px 0px 23px -16px rgba(66, 68, 90, 1);
+}
